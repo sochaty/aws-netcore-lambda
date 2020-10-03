@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Life Without Limits : Inspiration for a Ridiculously Good Life",
+    "author": "Nick Vujicic",
+    "genre": "Assertiveness, Motivation & Self-esteem",
+    "publishingHouse": "Waterbrook Press (A Division of Random House Inc)",
+    "publishedOn": "2015-02-24T00:00:00"
+  },
+  {
+    "name": "Mindhunter : Inside the FBI Elite Serial Crime Unit (Now A Netflix Series)",
+    "author": "John Douglas, Mark Olshaker",
+    "genre": "Abnormal Psychology",
+    "publishingHouse": "Cornerstone",
+    "publishedOn": "2017-11-02T00:00:00"
+  },
+  {
+    "name": "Catch and Kill : Lies, Spies and a Conspiracy to Protect Predators",
+    "author": "Ronan Farrow",
+    "genre": "Sexual Abuse & Harassment",
+    "publishingHouse": "Little, Brown Book Group",
+    "publishedOn": "2019-10-05T00:00:00"
+  },
+  {
+    "name": "Bite-Size Python : An Introduction to Python Programming",
+    "author": "April Speight",
+    "genre": "IT & Computing",
+    "publishingHouse": "John Wiley & Sons Inc",
+    "publishedOn": "2020-10-29T00:00:00"
+  },
+  {
+    "name": "Clean Code : A Handbook of Agile Software Craftsmanship",
+    "author": "Robert Martin",
+    "genre": "Software Engineering",
+    "publishingHouse": "Pearson Education (US)",
+    "publishedOn": "2009-03-01T00:00:00"
+  },
+  {
+    "name": "The Star Wars Archives. 1977-1983 - 40th Anniversary Edition",
+    "author": " Paul Duncan",
+    "genre": "Dance & Other Performing Arts",
+    "publishingHouse": "Taschen GmbH",
+    "publishedOn": "2020-12-13T00:00:00"
+  },
+  {
+    "name": "12 Rules for Life : An Antidote to Chaos",
+    "author": "Jordan B. Peterson",
+    "genre": "Popular Psychology",
+    "publishingHouse": "Penguin Books Ltd",
+    "publishedOn": "2019-08-30T00:00:00"
+  }
+]

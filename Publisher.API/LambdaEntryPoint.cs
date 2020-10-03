@@ -1,6 +1,3 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
@@ -45,8 +42,9 @@ namespace Publisher.API
         /// Instead customize the IWebHostBuilder in the Init(IWebHostBuilder) overload.
         /// </summary>
         /// <param name="builder"></param>
-        protected override void Init(IHostBuilder builder)
-        {
-        }
+        //protected override void Init(IHostBuilder builder)
+        //{
+
+        //}
     }
 }

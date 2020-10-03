@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs
+/Publisher.API/bin
+/Publisher.API/obj/publish/win-x64
+/Publisher.API/obj/release/netcoreapp3.0
+/Publisher.API/obj/release/netcoreapp3.1
+/Publisher.API/obj/Debug/netcoreapp3.0/staticwebassets
+/Publisher.API/obj/Debug/netcoreapp3.0
+/Publisher.API/obj/Debug/netcoreapp3.1/staticwebassets
+/Publisher.API/obj/Debug/netcoreapp3.1
+/Publisher.API/obj
