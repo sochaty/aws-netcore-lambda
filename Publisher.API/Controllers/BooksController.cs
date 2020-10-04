@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Publisher.API.Services;
 
@@ -33,6 +34,33 @@ namespace Publisher.API.Controllers
             if (booksFromDb.Count != 0)
             {
                 return Ok(booksFromDb);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Book book)
+        {
+            if (book == null)
+            {
+                return BadRequest();
+            }
+            if (_bookService.CreateBook(book))
+            {
+                return Ok(book);
+            }
+
+            return NotFound();
+        }
+
+        [HttpDelete("{bookId}")]
+        public IActionResult Delete(string bookId)
+        {
+            Guid id;
+            Guid.TryParse(bookId, out id);
+            if (_bookService.DeleteBook(id))
+            {
+                return NoContent();
             }
             return NotFound();
         }

@@ -8,22 +8,25 @@ namespace Publisher.API.Services
 {
     public class BookService : IBookService
     {
-        private readonly IList<Book> _books;
+        private IList<Book> _books;
         public BookService()
         {
-            _books = new List<Book>();
             Initialize();
         }
 
         private void Initialize()
         {
-            using (StreamReader r = new StreamReader("books.json"))
+            if (_books == null)
             {
-                string json = r.ReadToEnd();
-                List<Book> items = JsonConvert.DeserializeObject<List<Book>>(json);
-                foreach (var item in items)
+                _books = new List<Book>();
+                using (StreamReader r = new StreamReader("books.json"))
                 {
-                    _books.Add(item);
+                    string json = r.ReadToEnd();
+                    List<Book> items = JsonConvert.DeserializeObject<List<Book>>(json);
+                    foreach (var item in items)
+                    {
+                        _books.Add(item);
+                    }
                 }
             }
         }
@@ -39,6 +42,28 @@ namespace Publisher.API.Services
             return booksByAuthor;
         }
 
+        public bool CreateBook(Book newBook)
+        {
+            var existingBook = _books.Where(b => b.Name.ToUpper().Equals(newBook.Name.ToUpper())).FirstOrDefault();
+            if (existingBook == null)
+            {
+                _books.Add(newBook);
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool DeleteBook(Guid bookId)
+        {
+            var existingBook = _books.Where(b => b.BookId == bookId).FirstOrDefault();
+            if (existingBook != null)
+            {
+                _books.Remove(existingBook);
+                return true;
+            }
+            return false;
+        }
 
     }
 }
