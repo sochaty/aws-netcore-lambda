@@ -53,8 +53,8 @@ namespace Publisher.API.Controllers
             return NotFound();
         }
 
-        [HttpDelete("{bookId}")]
-        public IActionResult Delete(string bookId)
+        [HttpDelete]
+        public IActionResult Delete([FromQuery]string bookId)
         {
             Guid id;
             Guid.TryParse(bookId, out id);
